@@ -1,0 +1,114 @@
+
+
+/* Base styles */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+    'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #213547;
+  background-color: #F5F8FA;
+}
+
+/* Common utilities */
+.shadow-card {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+.transition-all {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Status indicators */
+.status-indicator {
+  width: 100%;
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #E5E7EB;
+}
+
+.status-indicator-value {
+  height: 100%;
+  border-radius: 4px;
+}
+
+.status-good {
+  background-color: #10B981;
+}
+
+.status-warning {
+  background-color: #F59E0B;
+}
+
+.status-danger {
+  background-color: #EF4444;
+}
+
+/* Calendar styling */
+.calendar-day {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.calendar-day.active {
+  background-color: #3F51B5;
+  color: white;
+}
+
+.calendar-appointment {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  text-align: center;
+}
+
+/* Sidebar navigation */
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin-bottom: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.sidebar-link:hover {
+  background-color: rgba(63, 81, 181, 0.05);
+}
+
+.sidebar-link.active {
+  background-color: rgba(63, 81, 181, 0.1);
+  color: #3F51B5;
+}
+
+.sidebar-link .icon {
+  margin-right: 12px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+  
+  .mobile-menu {
+    display: block;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-menu {
+    display: none;
+  }
+}
